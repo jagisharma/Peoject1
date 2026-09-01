@@ -52,6 +52,24 @@
         animation: enter .8s cubic-bezier(.2, .8, .2, 1) both;
       }
 
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: .35rem;
+        margin: 0 auto 3rem;
+      }
+
+      nav a {
+        padding: .55rem .85rem;
+        color: var(--muted);
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: .9rem;
+        transition: background .2s, color .2s;
+      }
+
+      nav a:hover, nav a[aria-current="page"] { background: rgba(255,255,255,.1); color: var(--ink); }
+
       .eyebrow {
         margin: 0 0 1.25rem;
         color: var(--aqua);
@@ -110,7 +128,12 @@
     <div class="glow glow-one"></div>
     <div class="glow glow-two"></div>
     <main>
-      <p class="eyebrow">A warm welcome</p>
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="eyebrow">A warm welcome from Jinn</p>
       <h1>Hello, World!</h1>
       <p>A little corner of the web, made with care. This is the beginning of something wonderful.</p>
       <div class="badge"><span class="dot"></span> Ready to build</div>
